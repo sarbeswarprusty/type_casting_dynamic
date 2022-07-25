@@ -1,0 +1,30 @@
+#include <iostream>  
+using namespace std;  
+  
+class parent  
+    {  
+        public: virtual void print()  
+        {  
+              
+        }  
+    };  
+class derived: public parent  
+    {  
+          
+    };  
+      
+int main ()  
+    {  
+      
+    parent *ptr = new derived;  
+    derived* d = dynamic_cast <derived*> (ptr);  
+      
+    if ( d != NULL)  
+    {  
+        cout << " Dynamic casting is done successfully";  
+    }  
+    else  
+    {  
+        cout << " Dynamic casting is not done successfully";  
+    }  
+    } 
